@@ -15,12 +15,13 @@ export function makeClassComponentObserver(componentClass) {
         throw new Error("The componentWillReact life-cycle event is no longer supported")
     if (componentClass.__proto__ !== PureComponent) {
         if (!target.shouldComponentUpdate) target.shouldComponentUpdate = observerSCU
-        else if (target.shouldComponentUpdate !== observerSCU)
+        else if (target.shouldComponentUpdate !== observerSCU) {
             // n.b. unequal check, instead of existence check, as @observer might be on superclass as well
-            console.warn(
-                "It is not allowed to use shouldComponentUpdate in observer based components."
-            )
-        target.shouldComponentUpdate = observerSCU
+            // console.warn(
+            //     "It is not allowed to use shouldComponentUpdate in observer based components."
+            // )
+            target.shouldComponentUpdate = observerSCU
+        }
     }
 
     // this.props and this.state are made observable, just to make sure @computed fields that
