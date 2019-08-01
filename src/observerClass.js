@@ -26,8 +26,11 @@ export function makeClassComponentObserver(componentClass) {
     // are defined inside the component, and which rely on state or props, re-compute if state or props change
     // (otherwise the computed wouldn't update and become stale on props change, since props are not observable)
     // However, this solution is not without it's own problems: https://github.com/mobxjs/mobx-react/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Aobservable-props-or-not+
-    makeObservableProp(target, "props")
-    makeObservableProp(target, "state")
+
+    // disabled for compatiblity with react-css-modules
+
+    // makeObservableProp(target, "props")
+    // makeObservableProp(target, "state")
 
     const baseRender = target.render
     target.render = function() {

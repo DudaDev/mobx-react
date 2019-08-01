@@ -1,6 +1,6 @@
 {
-  "name": "mobx-react",
-  "version": "6.1.1",
+  "name": "@dudadev/mobx-react",
+  "version": "6.1.6",
   "description": "React bindings for MobX. Create fully reactive components.",
   "source": "src/index.js",
   "main": "dist/mobx-react.js",
@@ -12,7 +12,7 @@
   "types": "dist/mobx-react.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mobxjs/mobx-react.git"
+    "url": "https://github.com/DudaDev/mobx-react.git"
   },
   "scripts": {
     "prettier": "prettier --write \"**/*.js\" \"**/*.ts\"",
