@@ -17,9 +17,10 @@ export function makeClassComponentObserver(componentClass) {
         if (!target.shouldComponentUpdate) target.shouldComponentUpdate = observerSCU
         else if (target.shouldComponentUpdate !== observerSCU)
             // n.b. unequal check, instead of existence check, as @observer might be on superclass as well
-            throw new Error(
+            console.warn(
                 "It is not allowed to use shouldComponentUpdate in observer based components."
             )
+        target.shouldComponentUpdate = observerSCU
     }
 
     // this.props and this.state are made observable, just to make sure @computed fields that
