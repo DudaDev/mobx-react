@@ -1,6 +1,6 @@
 {
   "name": "@dudadev/mobx-react",
-  "version": "6.1.8",
+  "version": "6.1.9",
   "description": "React bindings for MobX. Create fully reactive components.",
   "source": "src/index.js",
   "main": "dist/mobx-react.js",
